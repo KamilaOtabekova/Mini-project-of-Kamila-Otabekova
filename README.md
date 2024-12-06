@@ -4,8 +4,9 @@ The purpose of this project to create a web application which will display Webst
 
 Steps followed to create.
 -------------------------
-1. I installed as was required Docker and started PostgreSQL session in terminal:
 
+1. I installed as was required Docker and started PostgreSQL session in terminal:
+---------------------------------------------------------------------------------
 # Pull the latest PostgreSQL Docker image
 docker pull postgres:latest
 
