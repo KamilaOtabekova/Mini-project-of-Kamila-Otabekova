@@ -3,7 +3,7 @@
 The purpose of this project to create a web application which will display Webster University's student schedule in timetable type using docker, python and html.
 
 Steps followed to create.
-
+-------------------------
 1. I installed as was required Docker and started PostgreSQL session in terminal:
 
 # Pull the latest PostgreSQL Docker image
