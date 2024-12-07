@@ -8,7 +8,7 @@ The purpose of this project to create a web application which will display Webst
 ### 1. I installed as was required Docker and started PostgreSQL session in terminal:
 
 ```
-#Then I pulled the latest PostgreSQL Docker image using following command:
+# Then I pulled the latest PostgreSQL Docker image using following command:
 
 docker pull postgres:latest
 
