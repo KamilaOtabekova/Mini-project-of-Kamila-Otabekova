@@ -62,7 +62,7 @@ INSERT INTO StudentSchedule (course_name, instructor, campus, building, room, da
 ('Machine Learning', 'Khuzhaev, M', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '109', '--T----', '01:30p 03:30p', '01/15/2025 05/15/2025', 'Spring');
 
 ```
- ##Create Flask Application
+ ##Create Flask Application - app.py
 
 ```
 import pg8000
