@@ -62,3 +62,140 @@ INSERT INTO StudentSchedule (course_name, instructor, campus, building, room, da
 ('Machine Learning', 'Khuzhaev, M', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '109', '--T----', '01:30p 03:30p', '01/15/2025 05/15/2025', 'Spring');
 
 ```
+ ##Create Flask Application
+
+```
+import pg8000
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route("/", methods=["GET", "POST"])
+def index():
+    if request.method == "POST":
+        semester = request.form["semester"]
+        return render_template("timetable.html", semester=semester)
+
+    return render_template("index.html")
+
+
+@app.route("/timetable", methods=["GET"])
+def timetable():
+    semester = request.args.get("semester")
+
+    if not semester:
+        semester = request.form.get("semester")
+
+    conn = pg8000.connect(user="student", password="student_pass", host="localhost", port=5432, database="postgres")
+    cur = conn.cursor()
+
+    query = "SELECT * FROM StudentSchedule WHERE semester = %s;"
+    cur.execute(query, (semester,))
+    rows = cur.fetchall()
+
+    if rows:
+        return render_template("timetable.html", semester=semester, data=rows, message="")
+    else:
+        return render_template("timetable.html", semester=semester, data=[], message="No data found for this semester.")
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+## Index HTML
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Timetable</title>
+</head>
+<body>
+    <h1>Welcome to the University Timetable</h1>
+    <h2>Select a Semester to View the Schedule</h2>
+    <form method="POST">
+        <label for="semester">Choose Semester:</label>
+        <select id="semester" name="semester" required>
+            <option value="Fall">Fall</option>
+            <option value="Spring">Spring</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+```
+##timetable html
+
+```
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Schedule for Semester: {{ semester }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Schedule for Semester: {{ semester }}</h1>
+    {% if data %}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Course Name</th>
+                <th>Instructor</th>
+                <th>Days</th>
+                <th>Time</th>
+                <th>Room</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[6] }}</td>
+                <td>{{ row[7] }}</td>
+                <td>{{ row[8] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>{{ message }}</p>
+    {% endif %}
+    <br>
+    <a href="/">Go Back</a>
+</body>
+</html>
+```
+
