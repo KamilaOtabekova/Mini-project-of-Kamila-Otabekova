@@ -31,7 +31,7 @@ Inside the container I connected to the PostgreSQL database through command:
 
 --- Creation of Student Schedule ---
 ```
-student=# CREATE TABLE StudentSchedule (
+CREATE TABLE StudentSchedule (
     crs_sec VARCHAR(50),
     hrs FLOAT,
     title VARCHAR(255),
@@ -45,6 +45,7 @@ student=# CREATE TABLE StudentSchedule (
     tm VARCHAR(10),
     type VARCHAR(50)
 );
+
 ```
 --- Insert data to table---
 ```
@@ -58,8 +59,7 @@ INSERT INTO StudentSchedule (crs_sec, hrs, title, instructor, campus, building, 
 ('COSC 2810 3T', 3.0, 'Systems Analysis and Design  ', 'Artikov, R         ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '115 ', '-M-----', '03:30p 06:20p', '01/15/2024 05/10/2024', 'SP', 'Lecture  '),
 ('COSC 1570 2T', 3.0, 'Mathematics for Computer     ', 'Nacional           ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '307 ', '-M-----', '12:30p 03:20p', '01/15/2024 05/10/2024', 'SP', 'Lecture  '),
 ('POLT 1070 3U', 3.0, 'Introduction to Political    ', 'Sonila, S.         ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '229 ', '----R--', '12:30p 03:20p', '01/15/2024 05/10/2024', 'SP', 'Lecture  '),
-('INTL 1050 2U', 3.0, 'Introduction - WITHDRAWN -   ', 'Yuldasheva         ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '110 ', '----R--', '09:30a 12:20p', '01/15/2024 05/10/2024', 'SP', 'Lecture  '),
-('SPCM 1040 4S', 3.0, 'Public Speaking              ', 'Shukurova          ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '404 ', '---W---', '12:30p 03:20p', '01/15/2024 05/10/2024', 'SP', 'Lecture  ');
+('INTL 1050 2U', 3.0, 'Introduction - WITHDRAWN -   ', 'Yuldasheva         ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '110 ', '----R--', '09:30a 12:20p', '01/15/2024 05/10/2024', 'SP', 'Lecture  ');
 
 
 ```
