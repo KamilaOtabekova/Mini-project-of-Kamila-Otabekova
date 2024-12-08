@@ -28,38 +28,39 @@ docker exec -it websterschedule-db psql -U studentschedule
 ## 2. Then I set up the PostgreSQL Database as was asked and tables
 
 Inside the container I connected to the PostgreSQL database through command:
-```
-psql -U student
-```
+
 --- Creation of Student Schedule ---
 ```
-CREATE TABLE StudentSchedule (
-    course_id SERIAL PRIMARY KEY,
-    course_name VARCHAR(255),
+student=# CREATE TABLE StudentSchedule (
+    crs_sec VARCHAR(50),
+    hrs FLOAT,
+    title VARCHAR(255),
     instructor VARCHAR(255),
     campus VARCHAR(255),
     building VARCHAR(255),
     room VARCHAR(50),
-    days VARCHAR(50),
+    days VARCHAR(10),
     time VARCHAR(50),
     date_range VARCHAR(50),
-    semester VARCHAR(50)
+    tm VARCHAR(10),
+    type VARCHAR(50)
 );
 ```
 --- Insert data to table---
 ```
-INSERT INTO StudentSchedule (course_name, instructor, campus, building, room, days, time, date_range, semester) VALUES
-('Computer Languages', 'Bekov, San', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '115', '--T----', '02:00p 04:20p', '08/19/2024 12/13/2024', 'Fall'),
-('Operating Systems', 'Boeva, Sok', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '114', '--T----', '04:30p 06:50p', '08/19/2024 12/13/2024', 'Fall'),
-('Computer and Information', 'Isroilov', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '114', '--R----', '04:30p 06:50p', '08/19/2024 12/13/2024', 'Fall'),
-('The World System Since 1500', 'Badarch', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '409', '--M----', '11:30a 01:50p', '08/19/2024 12/13/2024', 'Fall'),
-('Introduction to Sustainability', 'Mukhammady', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '108', '--R----', '02:00p 04:20p', '08/19/2024 12/13/2024','Fall'),
-('Chess for Beginners', 'Singler, J', 'Webster Univ Tashkent, Uzbekistan', 'WebNet+', 'N/A', '--W----', '07:00p 08:30p', '08/19/2024 10/11/2024', 'Fall'),
-('Computer Networks', 'Smith, J', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '103', '--M----', '09:00a 11:00a', '01/15/2025 05/15/2025', 'Spring'),
-('Artificial Intelligence', 'Doe, J', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '105', '--T----', '12:00p 02:00p', '01/15/2025 05/15/2025', 'Spring'),
-('Database Design', 'Ali, S', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '107', '--R----', '03:00p 05:00p', '01/15/2025 05/15/2025','Spring'),
-('Global Politics', 'Lee, A', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '202', '--W----', '10:00a 12:00p', '01/15/2025 05/15/2025', 'Spring'),
-('Machine Learning', 'Khuzhaev, M', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '109', '--T----', '01:30p 03:30p', '01/15/2025 05/15/2025', 'Spring');
+INSERT INTO StudentSchedule (crs_sec, hrs, title, instructor, campus, building, room, days, time, date_range, tm, type) VALUES
+('COSC 2110 3T', 3.0, 'Computer Languages            ', 'Bekov, San         ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '115 ', '--T----', '02:00p 04:20p', '08/19/2024 12/13/2024', 'FA', 'Lecture  '),
+('COSC 2610 2T', 3.0, 'Operating Systems            ', 'Boeva, Sok         ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '114 ', '--T----', '04:30p 06:50p', '08/19/2024 12/13/2024', 'FA', 'Lecture  '),
+('COSC 3410 1T', 3.0, 'Computer and Information     ', 'Isroilov           ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '108 ', '----R---', '04:30p 06:50p', '08/19/2024 12/13/2024', 'FA', 'Lecture  '),
+('INTL 1500 1U', 3.0, 'The World System Since 1500  ', 'Badarch            ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '409 ', '--M----', '11:30a 01:50p', '08/19/2024 12/13/2024', 'FA', 'Lecture  '),
+('SUST 1000 1U', 3.0, 'Introduction to              ', 'Mukhammady         ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '108 ', '----R---', '02:00p 04:20p', '08/19/2024 12/13/2024', 'FA', 'Lecture  '),
+('EDEX 3001 3S', 1.0, 'Chess for Beginners          ', 'Singler, J         ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '    ', '---W----', '07:00p 08:30p', '08/19/2024 10/11/2024', 'F1', 'WebNet+  '),
+('COSC 2810 3T', 3.0, 'Systems Analysis and Design  ', 'Artikov, R         ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '115 ', '-M-----', '03:30p 06:20p', '01/15/2024 05/10/2024', 'SP', 'Lecture  '),
+('COSC 1570 2T', 3.0, 'Mathematics for Computer     ', 'Nacional           ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '307 ', '-M-----', '12:30p 03:20p', '01/15/2024 05/10/2024', 'SP', 'Lecture  '),
+('POLT 1070 3U', 3.0, 'Introduction to Political    ', 'Sonila, S.         ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '229 ', '----R--', '12:30p 03:20p', '01/15/2024 05/10/2024', 'SP', 'Lecture  '),
+('INTL 1050 2U', 3.0, 'Introduction - WITHDRAWN -   ', 'Yuldasheva         ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '110 ', '----R--', '09:30a 12:20p', '01/15/2024 05/10/2024', 'SP', 'Lecture  '),
+('SPCM 1040 4S', 3.0, 'Public Speaking              ', 'Shukurova          ', 'Webster Univ Tashkent, Uzbekistan                   ', 'North Hall Classrooms', '404 ', '---W---', '12:30p 03:20p', '01/15/2024 05/10/2024', 'SP', 'Lecture  ');
+
 
 ```
  ##Create Flask Application - app.py
