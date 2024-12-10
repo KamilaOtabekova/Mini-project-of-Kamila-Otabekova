@@ -385,8 +385,6 @@ table tr:last-child td:last-child {
 }
 
 ```
-```
-```
 ## 6. *Run of Flask Application*
 
 **Location to my direction of files by:**
