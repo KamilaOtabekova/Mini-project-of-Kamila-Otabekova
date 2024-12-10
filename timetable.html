@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kamila's Schedule for Term {{ term }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Kamila's Schedule for term: {{ term }}</h1>
+      {% if data %}
+      <table border="0">
+        <thead>
+          <tr>
+            <th>Course ID</th>
+            <th>Hours</th>
+            <th>Name</th>
+            <th>Instructor</th>
+            <th>Campus</th>
+            <th>Building</th>
+            <th>Room</th>
+            <th>Days</th>
+            <th>Time</th>
+            <th>Date</th>
+            <th>Terms</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in data %}
+          <tr>
+            <td>{{ row[0] }}</td> #Course ID
+            <td>{{ row[1] }}</td> #Hours
+            <td>{{ row[2] }}</td> #Name
+            <td>{{ row[3] }}</td> #Prof
+            <td>{{ row[4] }}</td> #Campus
+            <td>{{ row[5] }}</td> #Building
+            <td>{{ row[6] }}</td> #Room
+            <td>{{ row[7] }}</td> #Days
+            <td>{{ row[8] }}</td> #Time
+            <td>{{ row[9] }}</td> #Date
+            <td>{{ row[10] }}</td> #Term
+            <td>{{ row[11] }}</td> #Type
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p>{{ message }}</p>
+      {% endif %}
+
+      <a href="/">Go back</a>
+    </main>
+  </body>
+</html>
