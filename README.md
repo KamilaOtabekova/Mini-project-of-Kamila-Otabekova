@@ -5,7 +5,7 @@ The purpose of this project to create a web application which will display Webst
 
 ***Steps followed to create.****
 
-## 1. **I installed as was required Docker and started PostgreSQL session in terminal:**
+## 1. *I installed as was required Docker and started PostgreSQL session in terminal:*
 
 ***Then I pulled the latest PostgreSQL Docker image using following command:***
 
