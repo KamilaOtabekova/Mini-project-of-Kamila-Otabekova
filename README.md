@@ -148,6 +148,30 @@ if __name__ == "__main__":
 
 ## 5. *HTML created codes for Flask App*
 
+***enry.html***
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0">
+  <title>Welcome to Webster University</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="entry-page">
+  <main>
+    <h1>Welcome to Webster Schedule!</h1>
+    <form method="POST">
+      <label for="name">Hi! What is your name?</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your name">
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+</body>
+</html>
+
+```
 ***Index.html***
 
 ```html
@@ -255,18 +279,94 @@ if __name__ == "__main__":
 </html>
 
 ```
-## 5.1. *Then we should locate these two html codes in file named:*
+## 5.1. *Then we should locate these index and timetable html codes in file named:*
 
 ```sql
 
 templates
 
 ```
+
+## 5.1. *Also we should locate entry html codes in file named:*
+
+```sql
+
+static
+
+```
+
 ## 6. *Usage of CSS for styles*
 
 ***styles.css***
 
 ```css
+body.entry-page {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2b303a;
+  background-image: url('footer-image-webster-1600x1114_2.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+body.entry-page main {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  padding: 32px;
+  background: #232738;
+  border-radius: 10px;
+  text-align: center;
+}
+
+body.entry-page h1 {
+  font-family: "Montserrat", serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #d64933;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+body.entry-page input[type="text"] {
+  width: 90%;
+  height: 50px;
+  padding: 0 16px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #d64933;
+  color:  #32394f;
+  background-color: #eee5e9;
+  transition: border 0.3s ease;
+}
+
+body.entry-page input[type="text"]:focus {
+  border-color: #32394f;
+  outline: #d64933;
+}
+
+body.entry-page button {
+  width: 100%;
+  height: 48px;
+  background: #d64933;
+  color: #2b303a;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #d64933;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body.entry-page button:hover {
+  background-color: #32394f;
+  border: 1px solid #d64933;
+}
+
 * {
   left: 0;
   top: 0;
@@ -335,6 +435,7 @@ select {
   border-radius: 8px;
 }
 
+/* Дополнительные стили для hover или focus (опционально) */
 select:hover,
 select:focus {
   border-color: var(--stroke);
