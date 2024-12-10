@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0">
+  <title>Welcome to Webster University</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="entry-page">
+  <main>
+    <h1>Welcome to Webster Schedule!</h1>
+    <form method="POST">
+      <label for="name">Hi! What is your name?</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your name">
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+</body>
+</html>
