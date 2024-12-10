@@ -279,7 +279,7 @@ if __name__ == "__main__":
 </html>
 
 ```
-## 5.1. *Then we should locate these index and timetable html codes in file named:*
+## 5.1. *Then we should locate these entry, index and timetable html codes in file named:*
 
 ```sql
 
