@@ -435,7 +435,6 @@ select {
   border-radius: 8px;
 }
 
-/* Дополнительные стили для hover или focus (опционально) */
 select:hover,
 select:focus {
   border-color: var(--stroke);
