@@ -387,7 +387,7 @@ table tr:last-child td:last-child {
 ```
 ## 6. *Run of Flask Application*
 
-**Location to my direction of files by:**
+***Location to my direction of files by:***
 
 ```sql
 cd "C:\Users\hpenv\Desktop\final"
