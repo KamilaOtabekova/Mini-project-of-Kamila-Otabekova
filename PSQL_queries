@@ -23,9 +23,8 @@ INSERT INTO WebsterSchedule (crs_sec, hrs, title, instructor, campus, building, 
 ('COSC 3410 1T', 3.0, 'Computer and Information Security', 'Islombek Isroilov', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '108 ', '----R---', '04:30p 06:50p', '08/19/2024 12/13/2024', 'Fall', 'Lecture'),
 ('INTL 1500 1U', 3.0, 'The World System Since 1500', 'Badarch', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '409 ', '--M----', '11:30a-01:50p', '08/19/2024 12/13/2024', 'Fall', 'Lecture'),
 ('SUST 1000 1U', 3.0, 'Introduction to Sustanability', 'Mokhistara Mukhammadyunusova', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '108 ', '----R---', '02:00p 04:20p', '08/19/2024 12/13/2024', 'Fall', 'Lecture'),
-('EDEX 3001 3S', 1.0, 'Chess for Beginners', 'Jonathan Singler', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '    ', '---W----', '07:00p 08:30p', '08/19/2024 10/11/2024', 'Spring', 'WebNet+'),
+('EDEX 3001 3S', 1.0, 'Chess for Beginners', 'Jonathan Singler', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', 'Web+', '---W----', '07:00p 08:30p', '08/19/2024 10/11/2024', 'Spring', 'WebNet+'),
 ('COSC 2810 3T', 3.0, 'Systems Analysis and Design', 'Artikov', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '115 ', '-M-----', '03:30p 06:20p', '01/15/2024 05/10/2024', 'Spring', 'Lecture'),
 ('COSC 1570 2T', 3.0, 'Mathematics for Computer', 'Nacional', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '307 ', '-M-----', '12:30p 03:20p', '01/15/2024 05/10/2024', 'Spring', 'Lecture'),
 ('POLT 1070 3U', 3.0, 'Introduction to Political', 'Sonila', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '229 ', '----R--', '12:30p 03:20p', '01/15/2024 05/10/2024', 'Spring', 'Lecture'),
-('INTL 1050 2U', 3.0, 'Introduction ', 'Yuldasheva INTL', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '110 ', '----R--', '09:30a 12:20p', '01/15/2024 05/10/2024', 'Spring', 'Lecture');
-
+('INTL 1050 2U', 3.0, 'Introduction INTL', 'Yuldasheva', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '110 ', '----R--', '09:30a 12:20p', '01/15/2024 05/10/2024', 'Spring', 'Lecture');
