@@ -1,53 +1,38 @@
--- Create the Timetable table
-CREATE TABLE Timetable (
-    course_id SERIAL PRIMARY KEY,
-    course_name VARCHAR(255),
-    day VARCHAR(50),
-    time VARCHAR(50),
+***Creation of Webster Schedule:***
+
+```sql
+
+CREATE TABLE WebsterSchedule (
+    crs_sec VARCHAR(50),
+    hrs FLOAT,
+    title VARCHAR(255),
+    instructor VARCHAR(255),
+    campus VARCHAR(255),
+    building VARCHAR(255),
     room VARCHAR(50),
-    level INT
+    days VARCHAR(10),
+    time VARCHAR(50),
+    date_range VARCHAR(50),
+    term VARCHAR(10),
+    type VARCHAR(50)
 );
 
--- Insert Sample Data into the Timetable table
-INSERT INTO Timetable (course_name, day, time, room, level) VALUES
-('Computer Science 101', 'Monday', '9:00 AM', 'Room 101', 1),
-('Operating Systems', 'Tuesday', '10:00 AM', 'Room 102', 1),
-('Data Structures', 'Wednesday', '2:00 PM', 'Room 103', 2),
-('Advanced Algorithms', 'Thursday', '11:00 AM', 'Room 104', 3),
-('Machine Learning', 'Friday', '1:00 PM', 'Room 105', 2),
-('Database Systems', 'Monday', '3:00 PM', 'Room 106', 3),
-('Web Development', 'Tuesday', '11:00 AM', 'Room 107', 1),
-('Networking', 'Thursday', '2:00 PM', 'Room 108', 2);
+```
 
--- Optionally, create other related tables if needed, for example, students, courses, etc.
--- Example: Students Table
-CREATE TABLE Students (
-    student_id SERIAL PRIMARY KEY,
-    name VARCHAR(255),
-    level INT
-);
+***Webster's Schedule data insertion to it's table:***
 
--- Insert sample data into the Students table
-INSERT INTO Students (name, level) VALUES
-('Alice Johnson', 1),
-('Bob Smith', 2),
-('Charlie Brown', 3),
-('David Lee', 1);
+```sql
 
--- Example: Rooms Table (optional if you want to track rooms separately)
-CREATE TABLE Rooms (
-    room_id SERIAL PRIMARY KEY,
-    room_name VARCHAR(50),
-    building_name VARCHAR(50)
-);
+INSERT INTO WebsterSchedule (crs_sec, hrs, title, instructor, campus, building, room, days, time, date_range, term, type) VALUES
+('COSC 2110 3T', 3.0, 'Computer Languages', 'Sanjar Bekov', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '115 ', '--T----', '02:00p-04:20p', '08/19/2024 12/13/2024', 'Fall', 'Lecture'),
+('COSC 2610 2T', 3.0, 'Operating Systems', 'Sokhibjamol Boeva', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '114 ', '--T----', '04:30p-06:50p', '08/19/2024 12/13/2024', 'Fall', 'Lecture'),
+('COSC 3410 1T', 3.0, 'Computer and Information Security', 'Islombek Isroilov', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '108 ', '----R---', '04:30p 06:50p', '08/19/2024 12/13/2024', 'Fall', 'Lecture'),
+('INTL 1500 1U', 3.0, 'The World System Since 1500', 'Badarch', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '409 ', '--M----', '11:30a-01:50p', '08/19/2024 12/13/2024', 'Fall', 'Lecture'),
+('SUST 1000 1U', 3.0, 'Introduction to Sustanability', 'Mokhistara Mukhammadyunusova', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '108 ', '----R---', '02:00p 04:20p', '08/19/2024 12/13/2024', 'Fall', 'Lecture'),
+('EDEX 3001 3S', 1.0, 'Chess for Beginners', 'Jonathan Singler', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '    ', '---W----', '07:00p 08:30p', '08/19/2024 10/11/2024', 'Spring', 'WebNet+'),
+('COSC 2810 3T', 3.0, 'Systems Analysis and Design', 'Artikov', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '115 ', '-M-----', '03:30p 06:20p', '01/15/2024 05/10/2024', 'Spring', 'Lecture'),
+('COSC 1570 2T', 3.0, 'Mathematics for Computer', 'Nacional', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '307 ', '-M-----', '12:30p 03:20p', '01/15/2024 05/10/2024', 'Spring', 'Lecture'),
+('POLT 1070 3U', 3.0, 'Introduction to Political', 'Sonila', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '229 ', '----R--', '12:30p 03:20p', '01/15/2024 05/10/2024', 'Spring', 'Lecture'),
+('INTL 1050 2U', 3.0, 'Introduction ', 'Yuldasheva INTL', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '110 ', '----R--', '09:30a 12:20p', '01/15/2024 05/10/2024', 'Spring', 'Lecture');
 
--- Insert sample data into the Rooms table
-INSERT INTO Rooms (room_name, building_name) VALUES
-('Room 101', 'Building A'),
-('Room 102', 'Building B'),
-('Room 103', 'Building C'),
-('Room 104', 'Building D'),
-('Room 105', 'Building E'),
-('Room 106', 'Building F'),
-('Room 107', 'Building G'),
-('Room 108', 'Building H');
+```
