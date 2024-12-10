@@ -77,7 +77,7 @@ INSERT INTO WebsterSchedule (crs_sec, hrs, title, instructor, campus, building, 
 
 ```
 
-**2.1 *After creation we should leave container by:*
+## 2.1 *After creation we should leave container by:*
 ```sql
 \q
 ```
