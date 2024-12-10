@@ -13,19 +13,19 @@ The purpose of this project to create a web application which will display Webst
 docker pull postgres:latest
 ```
 
-***After that I created a docker container for the PostgreSQL database using my name as database name:***
+***After that I created a docker container for the PostgreSQL database using my name as database name by:***
 
 ```bash
 docker run --name kamilaschedule-db -e POSTGRES_USER=kamila -e POSTGRES_PASSWORD=kamila_pass -d -p 5432:5432 postgres:latest
 ```
 
-***Then I verified that the container is running:***
+***Then I verified that the container is running by:***
 
 ```bash
 docker ps
 ```
 
-***Using following command I gained access to my running PostgreSQL container:***
+***Using following command I gained access to my running PostgreSQL container by:***
 
 ```bash
 docker exec -it kamilaschedule-db psql -U kamila
@@ -87,7 +87,7 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-***Install Flask and pg8000 for database connection***
+***Installion of Flask and pg8000 for database connection***
 
 ```bash
 pip install flask pg8000
@@ -136,7 +136,7 @@ if __name__ == "__main__":
     app.run(debug=True)
 ```
 
-## 5. *HTML Templates for Flask*
+## 5. *HTML created codes for Flask App*
 
 ***Index.html***
 
