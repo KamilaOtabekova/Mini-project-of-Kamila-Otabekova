@@ -59,6 +59,11 @@ CREATE TABLE WebsterSchedule (
 
 ```
 
+***Verification of creation table by:***
+```sql
+select * from WebsterSchedule
+```
+
 ***Webster's Schedule data insertion to it's table:***
 
 ```sql
@@ -76,7 +81,10 @@ INSERT INTO WebsterSchedule (crs_sec, hrs, title, instructor, campus, building, 
 ('INTL 1050 2U', 3.0, 'Introduction ', 'Yuldasheva INTL', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '110 ', '----R--', '09:30a 12:20p', '01/15/2024 05/10/2024', 'Spring', 'Lecture');
 
 ```
-
+***Verification of insertion in table by:***
+```sql
+select * from WebsterSchedule
+```
 ## 2.1 *After creation we should leave container by:*
 ```sql
 \q
