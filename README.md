@@ -87,7 +87,7 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-***Installion of Flask and pg8000 for database connection***
+***Installion of Flask and pg8000 for database connection by:***
 
 ```bash
 pip install flask pg8000
