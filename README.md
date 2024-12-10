@@ -61,7 +61,7 @@ CREATE TABLE WebsterSchedule (
 
 ***Verification of creation table by:***
 ```sql
-select * from WebsterSchedule
+select * from WebsterSchedule;
 ```
 
 ***Webster's Schedule data insertion to it's table:***
@@ -83,7 +83,7 @@ INSERT INTO WebsterSchedule (crs_sec, hrs, title, instructor, campus, building, 
 ```
 ***Verification of insertion in table by:***
 ```sql
-select * from WebsterSchedule
+select * from WebsterSchedule;
 ```
 ## 2.1 *After creation we should leave container by:*
 ```sql
