@@ -256,6 +256,8 @@ templates
 ```
 ## 6. *Usage of CSS for styles*
 
+***styles.css***
+
 ```css
 * {
   left: 0;
@@ -385,7 +387,11 @@ table tr:last-child td:last-child {
 }
 
 ```
-## 6. *Run of Flask Application*
+## 6.1. *Locate code in file named:*
+```sql
+static
+```
+## 7. *Run of Flask Application*
 
 ***Location to my direction of files by:***
 
@@ -395,7 +401,7 @@ cd "C:\Users\hpenv\Desktop\final"
 ```python
 python app.py
 ```
-## 7. *When we are finished, we need just stop container by:*
+## 8. *When we are finished, we need just stop container by:*
 
 ```sql
 docker stop kamilaschedule
