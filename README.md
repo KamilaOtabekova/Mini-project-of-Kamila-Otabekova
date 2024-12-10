@@ -76,7 +76,7 @@ INSERT INTO WebsterSchedule (crs_sec, hrs, title, instructor, campus, building, 
 ('INTL 1050 2U', 3.0, 'Introduction ', 'Yuldasheva INTL', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '110 ', '----R--', '09:30a 12:20p', '01/15/2024 05/10/2024', 'Spring', 'Lecture');
 
 ```
-## 3. *Installion of Python and Flask Dependencies*
+## 3. *Installation of Python and Flask Dependencies*
 
 ***To create and activate virtual environment I used:***
 
@@ -87,7 +87,7 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-***Installion of Flask and pg8000 for database connection by:***
+***Installation of Flask and pg8000 for database connection by:***
 
 ```bash
 pip install flask pg8000
@@ -388,7 +388,7 @@ table tr:last-child td:last-child {
 ```
 ## 6. *Run of Flask Application*
 
-***Location to my direction of files:
+**Location to my direction of files by:**
 
 ```sql
 cd "C:\Users\hpenv\Desktop\final"
