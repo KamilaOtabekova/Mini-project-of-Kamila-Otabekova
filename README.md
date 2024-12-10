@@ -395,7 +395,7 @@ cd "C:\Users\hpenv\Desktop\final"
 ```python
 python app.py
 ```
-## 7. *When we are finished, just stop container by:*
+## 7. *When we are finished, we need just stop container by:*
 
 ```sql
 docker stop kamilaschedule
