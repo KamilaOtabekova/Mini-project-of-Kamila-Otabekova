@@ -101,7 +101,6 @@ pip install flask pg8000
 ## 4. *Creation of Flask Application - app.py*
 
 ```python
-
 import pg8000
 from flask import Flask, render_template, request
 
@@ -134,7 +133,6 @@ def timetable():
         return render_template("timetable.html", semester=semester, data=rows, message="")
     else:
         return render_template("timetable.html", semester=semester, data=[], message="No data found for this semester.")
-
 
 if __name__ == "__main__":
     app.run(debug=True)
@@ -181,8 +179,7 @@ if __name__ == "__main__":
 ```
 ***timetable.html***
 
-```
-
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
