@@ -9,6 +9,14 @@ docker exec -it kamilaschedule-db psql -U kamila
 
 \c postgres
 
+#After creation table use:
+
+select * from WebsterSchedule;
+
+#After insertion in table use:
+
+select * from WebsterSchedule;
+
 \q
 
 python -m venv venv
