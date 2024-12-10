@@ -1,7 +1,7 @@
 
 # *Mini-project-of-Kamila-Otabekova*
 
-The purpose of this project to create a web application which will display Webster University's student schedule by using docker, python and html.
+The purpose of this project to create a web page which will display my Webster university schedule by choosing Fall and Spring terms by using docker, python and html.
 
 ***Steps followed to create.***
 
