@@ -76,6 +76,11 @@ INSERT INTO WebsterSchedule (crs_sec, hrs, title, instructor, campus, building, 
 ('INTL 1050 2U', 3.0, 'Introduction ', 'Yuldasheva INTL', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '110 ', '----R--', '09:30a 12:20p', '01/15/2024 05/10/2024', 'Spring', 'Lecture');
 
 ```
+
+**2.1 *After creation we should leave container by:*
+```sql
+\q
+```
 ## 3. *Installation of Python and Flask Dependencies*
 
 ***To create and activate virtual environment I used:***
@@ -92,7 +97,6 @@ venv\Scripts\activate
 ```bash
 pip install flask pg8000
 ```
-\q
 
 ## 4. *Creation of Flask Application - app.py*
 
