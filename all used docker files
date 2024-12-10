@@ -1,0 +1,24 @@
+
+docker pull postgres:latest
+
+docker run --name kamilaschedule-db -e POSTGRES_USER=kamila -e POSTGRES_PASSWORD=kamila_pass -d -p 5432:5432 postgres:latest
+
+docker ps
+
+docker exec -it kamilaschedule-db psql -U kamila
+
+\c postgres
+
+\q
+
+python -m venv venv
+
+venv\Scripts\activate
+
+pip install flask pg8000
+
+cd "C:\Users\hpenv\Desktop\final"
+
+python app.py
+
+docker stop kamilaschedule
