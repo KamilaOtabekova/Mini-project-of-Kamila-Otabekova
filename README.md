@@ -405,5 +405,5 @@ python app.py
 ## 8. *When we are finished, just stop container by:*
 
 ```sql
-docker stop university-db
+docker stop kamilaschedule
 ```
