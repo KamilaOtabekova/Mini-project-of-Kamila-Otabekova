@@ -395,14 +395,7 @@ cd "C:\Users\hpenv\Desktop\final"
 ```python
 python app.py
 ```
-## 7. *Accessing web browser*
-
-**This link will appear:**
-```bash
- http://127.0.0.1:5000/
-```
-
-## 8. *When we are finished, just stop container by:*
+## 7. *When we are finished, just stop container by:*
 
 ```sql
 docker stop kamilaschedule
