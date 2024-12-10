@@ -85,10 +85,10 @@ INSERT INTO WebsterSchedule (crs_sec, hrs, title, instructor, campus, building, 
 
 ***To create and activate virtual environment I used:***
 
-```bash
+```python
 python -m venv venv
 ```
-```bash
+```sql
 venv\Scripts\activate
 ```
 
