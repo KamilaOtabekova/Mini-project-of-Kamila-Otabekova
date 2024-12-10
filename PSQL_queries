@@ -1,6 +1,4 @@
-***Creation of Webster Schedule:***
-
-```sql
+- Creation of Webster Schedule:
 
 CREATE TABLE WebsterSchedule (
     crs_sec VARCHAR(50),
@@ -17,11 +15,7 @@ CREATE TABLE WebsterSchedule (
     type VARCHAR(50)
 );
 
-```
-
-***Webster's Schedule data insertion to it's table:***
-
-```sql
+- Webster's Schedule data insertion to it's table:
 
 INSERT INTO WebsterSchedule (crs_sec, hrs, title, instructor, campus, building, room, days, time, date_range, term, type) VALUES
 ('COSC 2110 3T', 3.0, 'Computer Languages', 'Sanjar Bekov', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '115 ', '--T----', '02:00p-04:20p', '08/19/2024 12/13/2024', 'Fall', 'Lecture'),
@@ -35,4 +29,3 @@ INSERT INTO WebsterSchedule (crs_sec, hrs, title, instructor, campus, building, 
 ('POLT 1070 3U', 3.0, 'Introduction to Political', 'Sonila', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '229 ', '----R--', '12:30p 03:20p', '01/15/2024 05/10/2024', 'Spring', 'Lecture'),
 ('INTL 1050 2U', 3.0, 'Introduction ', 'Yuldasheva INTL', 'Webster Univ Tashkent, Uzbekistan', 'North Hall Classrooms', '110 ', '----R--', '09:30a 12:20p', '01/15/2024 05/10/2024', 'Spring', 'Lecture');
 
-```
