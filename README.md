@@ -161,7 +161,7 @@ if __name__ == "__main__":
 
 ## 5. *HTML created codes for Flask App*
 
-***enry.html***
+***entry.html***
 
 ```html
 <!DOCTYPE html>
