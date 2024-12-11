@@ -109,38 +109,51 @@ pip install flask pg8000
 ## 4. *Creation of Flask Application - app.py*
 
 ```python
+from flask import Flask, render_template, request, redirect, url_for
 import pg8000
-from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
-def index():
+def entry():
     if request.method == "POST":
-        semester = request.form["semester"]
-        return render_template("timetable.html", semester=semester)
+        user_name = request.form["name"]
+        return redirect(url_for("index", name=user_name))
+    return render_template("entry.html")
 
-    return render_template("index.html")
+@app.route("/index/<name>", methods=["GET", "POST"])
+def index(name):
+    if request.method == "POST":
+        # Retrieve the term selected by the user
+        term = request.form["term"]
+        return redirect(url_for("timetable", term=term))
 
+    return render_template("index.html", name=name)
 
 @app.route("/timetable", methods=["GET"])
 def timetable():
-    semester = request.args.get("semester")
+    term = request.args.get('term')
+    if not term:
+        return "term not provided", 400
 
-    if not semester:
-        semester = request.form.get("semester")
+    conn = pg8000.connect(
+        user="kamila",
+        password="kamila_pass",
+        host="localhost", 
+        port=5432, 
+        database="postgres"
+    )
 
-    conn = pg8000.connect(user="student", password="student_pass", host="localhost", port=5432, database="postgres")
     cur = conn.cursor()
-
-    query = "SELECT * FROM StudentSchedule WHERE semester = %s;"
-    cur.execute(query, (semester,))
+    query = "SELECT * FROM WebsterSchedule WHERE term = %s;"
+    cur.execute(query, (term,))
     rows = cur.fetchall()
 
     if rows:
-        return render_template("timetable.html", semester=semester, data=rows, message="")
+        return render_template("timetable.html", term=term, data=rows, message="")
     else:
-        return render_template("timetable.html", semester=semester, data=[], message="No data found for this semester.")
+        return render_template("timetable.html", term=term, data=[], message="No data found for this term.")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
