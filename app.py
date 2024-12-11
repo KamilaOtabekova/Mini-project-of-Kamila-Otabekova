@@ -13,7 +13,7 @@ def entry():
 @app.route("/index/<name>", methods=["GET", "POST"])
 def index(name):
     if request.method == "POST":
-        # Retrieve the term selected by the user
+       
         term = request.form["term"]
         return redirect(url_for("timetable", term=term))
 
