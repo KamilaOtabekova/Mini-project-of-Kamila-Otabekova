@@ -29,4 +29,4 @@ cd "C:\Users\hpenv\Desktop\final"
 
 python app.py
 
-docker stop kamilaschedule
+docker stop kamilaschedule-db
