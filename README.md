@@ -124,7 +124,7 @@ def entry():
 @app.route("/index/<name>", methods=["GET", "POST"])
 def index(name):
     if request.method == "POST":
-        # Retrieve the term selected by the user
+       
         term = request.form["term"]
         return redirect(url_for("timetable", term=term))
 
@@ -230,7 +230,7 @@ if __name__ == "__main__":
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{name}}, Schedule for Term {{ term }}</title>
+    <title>Student's Schedule for Term {{ term }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -244,7 +244,7 @@ if __name__ == "__main__":
   </head>
   <body>
     <main>
-      <h1>{{name}}, Schedule for term: {{ term }}</h1>
+      <h1>Student's, Schedule for term: {{ term }}</h1>
       {% if data %}
       <table border="0">
         <thead>
@@ -267,12 +267,12 @@ if __name__ == "__main__":
           {% for row in data %}
           <tr>
             <td>{{ row[0] }}</td> 
-            <td>{{ row[1] }}</td> 
-            <td>{{ row[2] }}</td>
-            <td>{{ row[3] }}</td> 
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td> 
+            <td>{{ row[3] }}</td>
             <td>{{ row[4] }}</td> 
-            <td>{{ row[5] }}</td> 
-            <td>{{ row[6] }}</td> 
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
             <td>{{ row[7] }}</td> 
             <td>{{ row[8] }}</td> 
             <td>{{ row[9] }}</td>
@@ -285,12 +285,10 @@ if __name__ == "__main__":
       {% else %}
       <p>{{ message }}</p>
       {% endif %}
-
       <a href="/">Go back</a>
     </main>
   </body>
 </html>
-
 ```
 ## 5.1. *Then we should locate these entry, index and timetable html codes in file named:*
 
