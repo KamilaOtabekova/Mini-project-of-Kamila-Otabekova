@@ -180,7 +180,7 @@ if __name__ == "__main__":
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>University Timetable</title>
+    <title>Webster University Schedule</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -194,8 +194,8 @@ if __name__ == "__main__":
   </head>
   <body>
     <main>
-      <h1>University Timetable</h1>
-
+      <h1>Webster University Student Schedule</h1>
+      <h2>{{name}}, choose your term!</h2>
       <form action="/timetable" method="GET">
         <label for="term">Select term:</label>
         <select name="term" id="term">
