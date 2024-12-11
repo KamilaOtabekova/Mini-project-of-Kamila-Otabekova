@@ -297,15 +297,6 @@ if __name__ == "__main__":
 templates
 
 ```
-
-## 5.1. *Also we should locate entry html codes in file named:*
-
-```sql
-
-static
-
-```
-
 ## 6. *Usage of CSS for styles*
 
 ***styles.css***
