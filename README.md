@@ -230,7 +230,7 @@ if __name__ == "__main__":
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kamila's Schedule for Term {{ term }}</title>
+    <title>{{name}}, Schedule for Term {{ term }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -244,7 +244,7 @@ if __name__ == "__main__":
   </head>
   <body>
     <main>
-      <h1>Kamila's Schedule for term: {{ term }}</h1>
+      <h1>{{name}}, Schedule for term: {{ term }}</h1>
       {% if data %}
       <table border="0">
         <thead>
@@ -266,18 +266,18 @@ if __name__ == "__main__":
         <tbody>
           {% for row in data %}
           <tr>
-            <td>{{ row[0] }}</td> #Course ID
-            <td>{{ row[1] }}</td> #Hours
-            <td>{{ row[2] }}</td> #Name
-            <td>{{ row[3] }}</td> #Prof
-            <td>{{ row[4] }}</td> #Campus
-            <td>{{ row[5] }}</td> #Building
-            <td>{{ row[6] }}</td> #Room
-            <td>{{ row[7] }}</td> #Days
-            <td>{{ row[8] }}</td> #Time
-            <td>{{ row[9] }}</td> #Date
-            <td>{{ row[10] }}</td> #Term
-            <td>{{ row[11] }}</td> #Type
+            <td>{{ row[0] }}</td> 
+            <td>{{ row[1] }}</td> 
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td> 
+            <td>{{ row[4] }}</td> 
+            <td>{{ row[5] }}</td> 
+            <td>{{ row[6] }}</td> 
+            <td>{{ row[7] }}</td> 
+            <td>{{ row[8] }}</td> 
+            <td>{{ row[9] }}</td>
+            <td>{{ row[10] }}</td> 
+            <td>{{ row[11] }}</td> 
           </tr>
           {% endfor %}
         </tbody>
