@@ -185,7 +185,7 @@ if __name__ == "__main__":
 </html>
 
 ```
-***Index.html***
+***index.html***
 
 ```html
 <!DOCTYPE html>
