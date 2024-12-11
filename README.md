@@ -501,9 +501,9 @@ table tr:last-child td:last-child {
 ```sql
 static
 ```
-## 7. *Run of Flask Application*
+## 7. *Run Flask Application*
 
-***Location to my direction of files by:***
+***Location to my direction of app.py in file named: final by:***
 
 ```sql
 cd "C:\Users\hpenv\Desktop\final"
