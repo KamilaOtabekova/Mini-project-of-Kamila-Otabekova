@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{name}}, Schedule for Term {{ term }}</title>
+    <title>Student's Schedule for Term {{ term }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +17,7 @@
   </head>
   <body>
     <main>
-      <h1>{{name}}, Schedule for term: {{ term }}</h1>
+      <h1>Student's, Schedule for term: {{ term }}</h1>
       {% if data %}
       <table border="0">
         <thead>
@@ -58,7 +58,6 @@
       {% else %}
       <p>{{ message }}</p>
       {% endif %}
-
       <a href="/">Go back</a>
     </main>
   </body>
