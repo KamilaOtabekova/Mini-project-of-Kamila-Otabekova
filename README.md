@@ -508,6 +508,7 @@ static
 ```sql
 cd "C:\Users\hpenv\Desktop\final"
 ```
+***After locate, run app.py***
 ```python
 python app.py
 ```
